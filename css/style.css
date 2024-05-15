@@ -1,0 +1,68 @@
+.container-fluid{
+    background-image: url('./bg-cyan.jpg');
+    height: 730px;
+    background-size: cover;
+}
+.row{
+    width: 35%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+}
+.form-control{
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 39px;
+    padding: 8px 10px;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 0;
+    background: #fff;
+    color: #404040;
+}
+.row h2{
+    color: #404040;
+    font-size: 20px;
+    font-weight: 100;
+}
+.form-label{
+    color: #404040;
+    font-size: 12px;
+}
+p{
+    font-size: 12px;
+}
+p:hover{
+    color: #404040;
+    cursor: pointer;
+}
+.btn-success{
+    background-color: #2da5da;
+    border: none;
+}
+.btn-secondary{
+    background-color:darkgray;
+    border:none;
+}
+.btn{
+    border-radius: 0;
+}
+@media only screen  and (max-width:600px){
+    .row{
+        width: 90%;
+        margin-top: 30px;
+        position: absolute;
+         left: 53%;
+    top: 50%;
+        padding-bottom: 40px;
+
+    }
+    .container-fluid{
+        max-height: 700px;
+    }
+}
