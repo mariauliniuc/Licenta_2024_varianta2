@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Licenta_prototip_2.Utilizator
+namespace Licenta_prototip_2.Administrare
 {
 
 
-    public partial class Logare
+    public partial class LogareAdmin
     {
 
         /// <summary>
@@ -42,30 +42,21 @@ namespace Licenta_prototip_2.Utilizator
         protected global::System.Web.UI.WebControls.TextBox txtPass;
 
         /// <summary>
-        /// btnInreg control.
+        /// btnInregAdm control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnInreg;
+        protected global::System.Web.UI.WebControls.Button btnInregAdm;
 
         /// <summary>
-        /// btnAdmin control.
+        /// btnLogAdm control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAdmin;
-
-        /// <summary>
-        /// btnLog control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnLog;
+        protected global::System.Web.UI.WebControls.Button btnLogAdm;
     }
 }
