@@ -16,16 +16,21 @@ namespace Licenta_prototip_2.Utilizator
 
         protected void btnInreg_Click(object sender, EventArgs e)
         {
-            string url;
-            url = "../Utilizator/Inregistrare.aspx";
+            string url = "Inregistrare.aspx";
+            Response.Redirect(url);
+        }
+
+        protected void btnLog_Click(object sender, EventArgs e)
+        {
+            //daca credentialele sunt bune
+            string url = "FrmPrincipal.aspx";
             Response.Redirect(url);
         }
 
         protected void btnAdmin_Click(object sender, EventArgs e)
         {
-            string url="../Administrare/LogareAdmin.aspx";
-            Response.Redirect(url); 
-
+            string url = "../Administrare/LogareAdmin.aspx";
+            Response.Redirect(url);
         }
     }
 }

@@ -14,5 +14,11 @@ namespace Licenta_prototip_2.Utilizator
             
 
         }
+
+        protected void btnCont_Click(object sender, EventArgs e)
+        {
+            string url = "Cont.aspx";
+            Response.Redirect(url); 
+        }
     }
 }
