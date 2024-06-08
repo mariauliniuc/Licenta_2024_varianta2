@@ -11,70 +11,79 @@ namespace Licenta_prototip_2.Administrare
 {
 
 
-    public partial class LogareAdmin
+    public partial class del
     {
 
         /// <summary>
-        /// formLogarAdmin control.
+        /// lblAlgCtg control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm formLogarAdmin;
+        protected global::System.Web.UI.WebControls.Label lblAlgCtg;
 
         /// <summary>
-        /// lblEmailAdm control.
+        /// drpDwnLstCategorie control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblEmailAdm;
+        protected global::System.Web.UI.WebControls.DropDownList drpDwnLstCategorie;
 
         /// <summary>
-        /// txtEmailAdm control.
+        /// btnAfisare control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEmailAdm;
+        protected global::System.Web.UI.WebControls.Button btnAfisare;
 
         /// <summary>
-        /// lblPassAdmin control.
+        /// lblCautare control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPassAdmin;
+        protected global::System.Web.UI.WebControls.Label lblCautare;
 
         /// <summary>
-        /// txtPass control.
+        /// txtCautare control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPass;
+        protected global::System.Web.UI.WebControls.TextBox txtCautare;
 
         /// <summary>
-        /// btnExit control.
+        /// btnCautare control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnExit;
+        protected global::System.Web.UI.WebControls.Button btnCautare;
 
         /// <summary>
-        /// btnLogAdm control.
+        /// l3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnLogAdm;
+        protected global::System.Web.UI.WebControls.Label l3;
+
+        /// <summary>
+        /// GridView1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView1;
     }
 }
