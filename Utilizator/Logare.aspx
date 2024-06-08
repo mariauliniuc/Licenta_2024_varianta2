@@ -15,7 +15,7 @@
     <form id="form1" runat="server">
         <div class="container-fluid">
          <div class="row">
-             <h2>Logare</h2>
+             <h2>Autentificare</h2>
              
              <div class="mb-3">
                  <label for="formGroupExampleInput" class="form-label">E-mail</label>
@@ -27,10 +27,10 @@
              </div>
              <p><a href="">Ai uitat parola?</a></p>
              <div class="d-flex">
-
+                 
                 <asp:Button ID="btnInreg" runat="server" Text="Inregistrare" Height="40px" Width="170px" BorderColor="Aqua" BorderStyle="None" OnClick="btnInreg_Click" />
                  <asp:Button ID="btnAdmin" runat="server" Text="Administrare" Height="40px" Width="170px" BorderColor="#999999" OnClick="btnAdmin_Click" />
-                 <asp:Button ID="btnLog" runat="server" Text="Logare" Height="40px" Width="170px" BorderColor="Lime" OnClick="btnLog_Click" />
+                 <asp:Button ID="btnLog" runat="server" Text="Autentificare" Height="40px" Width="170px" BorderColor="Lime" OnClick="btnLog_Click" />
              </div>
          </div>
      </div>

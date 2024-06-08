@@ -19,29 +19,36 @@ namespace Licenta_prototip_2.Utilizator
 
             
         }
-
             protected void btnRegister_Click(object sender, EventArgs e)
             {
-                try
+            string loc = txtLoc.Text;
+            string str = txtStr.Text;
+            string numAdr = txtNumAdr.Text;
+            string sc = txtSc.Text;
+            string ap = txtAp.Text;
+            string jud = txtJud.Text;
+            string codPostal = txtCodPostal.Text;
+            string adr = loc + ", " + str + ", " + numAdr + ", " + sc + ", " + ap + ", " + jud + ", " + codPostal;
+            try
                 {
-                    ConexiuneBD.conn.Open();
-                    string adr = string.Concat(txtLoc.Text, ", ", txtStr.Text, ", ",txtNumAdr.Text, ", ", txtSc.Text, ", ", txtAp.Text, ", ", txtJud.Text, ", ", txtCodPostal.Text);
-
-                    cmd = new SqlCommand("insert into Produse(Nume_firma,Adr_mail,Nr_tel,CUI,Img_prod,Parola) values (@Nume_firma,@Adr_mail,@Nr_tel,@CUI,@Adresa,@Parola)", ConexiuneBD.conn);
-                    cmd.Parameters.AddWithValue("@Nume_firma", txtNumFirma.Text.Trim());
-                    cmd.Parameters.AddWithValue("@Adr_mail", txtEmail.Text.Trim());
-                    cmd.Parameters.AddWithValue("@Nr_tel", txtNrTel.Text.Trim());
-                    cmd.Parameters.AddWithValue("@CUI", txtCUI.Text.Trim());
-                    cmd.Parameters.AddWithValue("@Adresa", adr.Trim());
-                    cmd.Parameters.AddWithValue("@Parola", txtParola.Text.Trim());
+                ConexiuneBD.conn.Open();
+                    cmd = new SqlCommand("insert into Client(Nume_firma,Adr_mail,Nr_tel,CUI,Adresa,Parola) values (@Nume_firma,@Adr_mail,@Nr_tel,@CUI,@Adresa,@Parola)", ConexiuneBD.conn);
+                    cmd.Parameters.AddWithValue("@Nume_firma", txtNumFirma.Text);
+                    cmd.Parameters.AddWithValue("@Adr_mail", txtEmail.Text);
+                    cmd.Parameters.AddWithValue("@Nr_tel", txtNrTel.Text);
+                    cmd.Parameters.AddWithValue("@CUI", txtCUI.Text);
+                    cmd.Parameters.AddWithValue("@Adresa", adr);
+                    cmd.Parameters.AddWithValue("@Parola", txtParola.Text);
                     int t = cmd.ExecuteNonQuery();
                     if (t == 1) {
                     string url = "FrmPrincipal.aspx";
                         Response.Redirect(url);
                     }
                 }
-                catch { } finally {
+                catch(Exception ex) {
+                l2.Text = "Eroare la deschidere baza date" + ex.Message;
+            } finally {
                     ConexiuneBD.conn.Close();
                 }
             }
-        } }
+ }   }

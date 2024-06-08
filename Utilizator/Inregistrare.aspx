@@ -119,6 +119,7 @@
                     <div class="mt-3">
                         <!-- <button class="btn btn-primary">Inregistrare</button> -->
                         <asp:Button ID="btnRegister" runat="server" Text="Inregistrare" BackColor="Blue" Font-Bold="True" ForeColor="White" Height="50px" Width="200px" OnClick="btnRegister_Click" />
+                        <asp:Label ID="l2" runat="server" Text=""></asp:Label>
                     </div>
                 </div>
             </div>

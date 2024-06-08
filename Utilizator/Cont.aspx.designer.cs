@@ -15,58 +15,22 @@ namespace Licenta_prototip_2.Utilizator
     {
 
         /// <summary>
-        /// txtBoxNumeFirma control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtBoxNumeFirma;
+        protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// txtBoxEmail control.
+        /// FormView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtBoxEmail;
-
-        /// <summary>
-        /// txtBoxNrTel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtBoxNrTel;
-
-        /// <summary>
-        /// txtBoxCUI control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtBoxCUI;
-
-        /// <summary>
-        /// txtBoxAdresa control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtBoxAdresa;
-
-        /// <summary>
-        /// txtBoxJud control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtBoxJud;
+        protected global::System.Web.UI.WebControls.FormView FormView1;
 
         /// <summary>
         /// btnExit control.

@@ -5,8 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <link href="../Bootstrap/css/style2.css" rel="stylesheet" />
     <div class="container light-style flex-grow-1 container-p-y">
-        <h4 class="font-weight-bold py-3 mb-4">Setarile contului
-        </h4>
+        <h4 class="font-weight-bold py-3 mb-4">Setarile contului</h4>
         <div class="card overflow-hidden">
             <div class="row no-gutters row-bordered row-border-light">
                 <div class="col-md-3 pt-0">
@@ -21,30 +20,41 @@
                             <hr class="border-light m-0">
                             <div class="card-body">
                                 <div class="form-group">
-                                    <label class="form-label">Numele firmei: </label>
-                                    <asp:TextBox ID="txtBoxNumeFirma" runat="server" BorderColor="White" BorderStyle="None"></asp:TextBox>
+                                 <%--   <asp:Label ID="lblNumeFirma" runat="server" Text=""></asp:Label>
                                 </div>
                                 <div class="form-group">
-                                    <label class="form-label">E-mail: </label>
-                                    <asp:TextBox ID="txtBoxEmail" runat="server" BorderColor="White" BorderStyle="None"></asp:TextBox>
-
+                                    <asp:Label ID="lblEmail" runat="server" Text=""></asp:Label>
                                 </div>
                                 <div class="form-group">
-                                    <label class="form-label">Numar de telefon: </label>
-                                    <asp:TextBox ID="txtBoxNrTel" runat="server" BorderColor="White" BorderStyle="None"></asp:TextBox>
+                                    <asp:Label ID="lblNrTel" runat="server" Text=""></asp:Label>
                                 </div>
                                 <div class="form-group">
-                                    <label class="form-label">Codul de inregistrare unic: </label>
-                                    <asp:TextBox ID="txtBoxCUI" runat="server" BorderColor="White" BorderStyle="None"></asp:TextBox>
+                                    <asp:Label ID="lblCUI" runat="server" Text=""></asp:Label>  
                                 </div>
                                 <div class="form-group">
-                                    <label class="form-label">Adresa: </label>
-                                    <asp:TextBox ID="txtBoxAdresa" runat="server" BorderColor="White" BorderStyle="None"></asp:TextBox>
+                                    <asp:Label ID="lblAdresa" runat="server" Text="Label"></asp:Label>--%>
+                                    <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
+                                    <asp:FormView ID="FormView1" runat="server" CellPadding="4" ForeColor="#333333" Height="104px" Width="622px">
+                                        <EditRowStyle BackColor="#999999" />
+                                        <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                                        <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                                        <ItemTemplate>
+                                            <asp:Label ID="Label2" runat="server" Text='<%#Eval("Nume_firma") %>'></asp:Label>/asp:Label>
+                                            <br />
+                                            <asp:Label ID="Label3" runat="server" Text='<%#Eval("Adr_mail") %>'></asp:Label>/asp:Label>
+                                            <br />
+                                            <asp:Label ID="Label4" runat="server" Text='<%#Eval("Adr_mail") %>'></asp:Label>/asp:Label>
+                                            <br />
+                                            <asp:Label ID="Label5" runat="server" Text='<%#Eval("CUI") %>'></asp:Label>/asp:Label>
+                                            <br />
+                                            <asp:Label ID="Label6" runat="server" Text='<%#Eval("Adresa") %>'></asp:Label>/asp:Label>
+                                            
+                                        </ItemTemplate>
+                                        <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+                                        <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+                                    </asp:FormView>
                                 </div>
-                                <div class="form-group">
-                                    <label class="form-label">Judet: </label>
-                                    <asp:TextBox ID="txtBoxJud" runat="server" BorderColor="White" BorderStyle="None"></asp:TextBox>
-                                </div>
+                              
                             </div>
                         </div>
                     </div>
