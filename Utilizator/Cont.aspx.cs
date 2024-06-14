@@ -16,32 +16,51 @@ namespace Licenta_prototip_2.Utilizator
         SqlDataReader dr;
         protected void Page_Load(object sender, EventArgs e)
         {
-
             if (!Page.IsPostBack)
             {
-                try
+                if (Session["emailUser"] != null)
                 {
-                    Label1.Text = "Utilizatorul conectat este" + (string)Application["emailUser"];
-                    string a=Label1.Text;
-                    ConexiuneBD.conn.Open();
-                    cmd = new SqlCommand("Select Nume_firma, Adr_mail, Nr_tel, CUI, Adresa from Client where Adr_mail='"+a+"'",ConexiuneBD.conn);
-                    dr = cmd.ExecuteReader();
+                    string email = Session["emailUser"].ToString();
+                    Label1.Text = "Utilizatorul conectat este " + email;
+                    try
+                    {
+                        ConexiuneBD.conn.Open();
+                        cmd = new SqlCommand("SELECT Nume_firma, Adr_mail, Nr_tel, CUI, Adresa FROM Client WHERE Adr_mail=@Email", ConexiuneBD.conn);
+                        cmd.Parameters.AddWithValue("@Email", email);
+                        dr = cmd.ExecuteReader();
+
+                        if (dr.Read())
+                        {
+                            // Populează câmpurile cu datele utilizatorului
+                            Label2.Text = dr["Nume_firma"].ToString();
+                            Label3.Text = dr["Adr_mail"].ToString();
+                            Label4.Text = dr["Nr_tel"].ToString();
+                            Label5.Text = dr["CUI"].ToString();
+                            Label6.Text = dr["Adresa"].ToString();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Label1.Text = "Nu se poate realiza conexiunea: " + ex.Message;
+                    }
+                    finally
+                    {
+                        ConexiuneBD.conn.Close();
+                    }
                 }
-                catch (Exception ex)
+                else
                 {
-                    Label1.Text = "Nu se poate realiza conexiunea " + ex.Message;
-                }
-                finally
-                {
-                    ConexiuneBD.conn.Close();
+                    // Dacă sesiunea a expirat sau utilizatorul nu este autentificat, redirecționează la pagina de logare
+                    Response.Redirect("Logare.aspx");
                 }
             }
-
         }
+
         protected void btnExit_Click(object sender, EventArgs e)
         {
-            string url = "Logare.aspx";
-            Response.Redirect(url);
+            // Golire sesiune la deconectare
+            Session.Clear();
+            Response.Redirect("Logare.aspx");
         }
         protected void btnInfCont_Click(object sender, EventArgs e)
         {

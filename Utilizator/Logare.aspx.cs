@@ -41,8 +41,7 @@ namespace Licenta_prototip_2.Utilizator
             i = Convert.ToInt32(dt.Rows.Count.ToString());
             if (i == 1)
             {
-                Application["emailUser"]=txtEmail.Text;
-                Application["passUser"] = txtPass.Text;
+                Session["emailUser"] = txtEmail.Text;
 
                 string url = "FrmPrincipal.aspx";
                 Response.Redirect(url);
