@@ -14,35 +14,29 @@
     <link href="../Admin_design/styles.css" rel="stylesheet" />
 </head>
 <body>
-    <form id="formAdmin" runat="server">
+    <form id="form" runat="server">
         <div>
             <div class="wrapper">
                 <div class="sidebar">
-                    <h2>Administrare</h2>
-
-
-
+                   <h2>Administrare</h2>
                     <ul>
-                        <li><a href="dashboard.aspx">
-                            <asp:Button ID="btnHome" runat="server" Text="Acasa" OnClick="btnHome_Click" Font-Size="Medium" /></a>
-                        </li>
-                        <li><a href="add.aspx">
-                            <asp:Button ID="btnAdd" runat="server" Text="Adaugare produse" OnClick="btnAdd_Click" Font-Size="Medium" /></a></li>
-                        <li><a href="del.aspx">
-                            <asp:Button ID="btnDel" runat="server" Text="Stergere produse" OnClick="btnDel_Click" Font-Size="Medium" /></a></li>
-                        <li><a href="clienti.aspx">
-                            <asp:Button ID="btnUser" runat="server" Text="Clienti" OnClick="btnUser_Click" Font-Size="Medium" /></a></li>
-                        <li><a href="comenzi.html">
-                            <asp:Button ID="btnOrder" runat="server" Text="Comenzi" OnClick="btnOrder_Click" Font-Size="Medium" /></a></li>
-                        <li><a href="Logare.aspx">
-                            <asp:Button ID="btnExit" runat="server" Text="Log Off" OnClick="btnExit_Click" Font-Size="Medium" /></a></li>
+                        <li><a href="dashboard.aspx">Acasa</a></li>
+                        <li><a href="add.aspx">Adaugare produse</a></li>
+                        <li><a href="del.aspx">Stergere produse</a></li>
+                        <li><a href="comenzi.aspx">Comenzi</a></li>
+                        <li><a href="clienti.aspx">Clienti</a></li>
+                        <li><a href="LogareAdmin.aspx">Deconectare</a></li>
+
                     </ul>
                 </div>
-                
             </div>
+             <div class="main_content">
+        <div class="header"></div>  
+        <div class="info">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+            </div>
+                 </div>
 
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
         </div>
     </form>
 </body>

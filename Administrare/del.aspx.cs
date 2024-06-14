@@ -29,7 +29,7 @@ namespace Licenta_prototip_2.Administrare
 
                     }
                 }
-                catch (Exception ex)
+                catch 
                 {
                     Response.Write("<script>alert'Nu functioneaza legatura cu baza de date!'</script>");
 

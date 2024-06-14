@@ -21,29 +21,28 @@
                                 <asp:Label ID="lblCautare" runat="server" Text="Cauta produsul:" Font-Size="Medium"></asp:Label>
                                 <asp:TextBox ID="txtCautare" runat="server" Height="35px" Width="200px" Font-Size="Medium"></asp:TextBox>
                                 <asp:Button ID="btnCautare" runat="server" Text="Cauta" Font-Size="Large" Height="45px" Width="100px" />
-                    <asp:Label ID="l3" runat="server" Text="Afisare status"></asp:Label>
-                    <%--<asp:Button ID="btnStergere" runat="server" Text="Sterge produsul" OnClick="btnStergere_Click" CssClass="p-0" Font-Size="Medium" Font-Underline="False" Height="60px" Width="130px" />--%>   
+                    <asp:Label ID="l3" runat="server" Text=""></asp:Label>
                     <div class="container" style="margin-bottom: 10px">
                         <asp:GridView ID="GridView1" runat="server"
                             BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3"
-                            AutoGenerateColumns="False" >
+                            AutoGenerateColumns="False" Width="941px"  >
                             <%--design--%>
                             <Columns>
-                                <asp:BoundField DataField="Id_prod" HeaderText="ID" />
-                                <asp:BoundField DataField="Nume_prod" HeaderText="Nume" />
-                                <asp:BoundField DataField="Descriere_prod" HeaderText="Descriere" />
-                                <asp:BoundField DataField="Pret_prod" HeaderText="Pret" />
-                                <asp:BoundField DataField="Cantitate_prod" HeaderText="Cantitate" />
-                                <asp:TemplateField HeaderText="Imagine">
+                                <asp:BoundField DataField="Id_prod" HeaderText="ID" ItemStyle-HorizontalAlign="Center"/>
+                                <asp:BoundField DataField="Nume_prod" HeaderText="Nume" ItemStyle-HorizontalAlign="Center"/>
+                                <asp:BoundField DataField="Descriere_prod" HeaderText="Descriere" ItemStyle-HorizontalAlign="Center"/>
+                                <asp:BoundField DataField="Pret_prod" HeaderText="Pret" ItemStyle-HorizontalAlign="Center"/>
+                                <asp:BoundField DataField="Cantitate_prod" HeaderText="Cantitate" ItemStyle-HorizontalAlign="Center" />
+                                <asp:TemplateField HeaderText="Imagine" FooterStyle-Wrap="True" FooterStyle-VerticalAlign="Middle" FooterStyle-HorizontalAlign="Center" ItemStyle-HorizontalAlign="Center">
                                     <ItemTemplate>
                                         <img src="../img2/<%#Eval("Img_prod") %>" style="width: 80px; height: 100px" />
                                     </ItemTemplate>
                                 </asp:TemplateField>
 
-                                <asp:TemplateField>
+                                <asp:TemplateField ItemStyle-HorizontalAlign="Center">
                                     <ItemTemplate>
-                                        <asp:Button ID="Button1" runat="server" Text="Sterge" OnClick="Button1_Click" />
-                                    </ItemTemplate> 
+                                        <asp:Button ID="Button1" runat="server" Text="Sterge" OnClick="Button1_Click" Width="100px" Height="80px" Font-Size="Large" />
+                                    </ItemTemplate>
 
                                 </asp:TemplateField>
 
