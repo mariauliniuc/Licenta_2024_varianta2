@@ -11,23 +11,16 @@ namespace Licenta_prototip_2.Utilizator
 {
     public partial class Logare : System.Web.UI.Page
     {
-
         SqlConnection conn = new SqlConnection(@"Data Source=LAPTOP-5UO3NBV3\SQLEXPRESS;Initial Catalog=MagazinOnline;Integrated Security=True;TrustServerCertificate=True");
         int i;
-        protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
-
+        protected void Page_Load(object sender, EventArgs e){}
         protected void btnInreg_Click(object sender, EventArgs e)
         {
             string url = "Inregistrare.aspx";
             Response.Redirect(url);
         }
-
         protected void btnLog_Click(object sender, EventArgs e)
         {
-
             i = 0;
             conn.Open();
             SqlCommand cmd = conn.CreateCommand();
@@ -42,17 +35,15 @@ namespace Licenta_prototip_2.Utilizator
             if (i == 1)
             {
                 Session["emailUser"] = txtEmail.Text;
-
                 string url = "FrmPrincipal.aspx";
                 Response.Redirect(url);
             }
             else
             {
-
+                ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Introduceti adresa de email si parola corecte!');", true);
             }
             conn.Close();
         }
-
         protected void btnAdmin_Click(object sender, EventArgs e)
         {
             string url = "../Administrare/LogareAdmin.aspx";

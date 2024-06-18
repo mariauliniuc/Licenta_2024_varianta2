@@ -22,7 +22,8 @@
         <ItemTemplate>
             <div class="col">
                 <div class="card">
-                    <asp:Image ID="Image1" runat="server" class="card-img-top" />
+                 <asp:Image ID="Image1" runat="server" ImageUrl='<%# ResolveUrl("~/img2/" + Eval("Img_prod")) %>' class="card-img-top" />
+
                     <%--<img src="../img2/<%#Eval("Img_prod") %>" class="card-img-top" />--%>
                     <div class="card-body">
                         <h5 class="card-title">
