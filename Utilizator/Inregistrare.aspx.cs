@@ -41,6 +41,7 @@ namespace Licenta_prototip_2.Utilizator
                     cmd.Parameters.AddWithValue("@Parola", txtParola.Text);
                     int t = cmd.ExecuteNonQuery();
                     if (t == 1) {
+                    Session["emailUser"] = txtEmail.Text;
                     string url = "FrmPrincipal.aspx";
                         Response.Redirect(url);
                     }

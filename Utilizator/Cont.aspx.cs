@@ -67,10 +67,6 @@ namespace Licenta_prototip_2.Utilizator
             string url = "Cont.aspx";
             Response.Redirect(url);
         }
-        protected void btnSchParola_Click(object sender, EventArgs e)
-        {
-            string url = "SchimbareParola.aspx";
-            Response.Redirect(url);
-        }
+      
     }
 }

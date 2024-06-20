@@ -15,17 +15,20 @@ namespace Licenta_prototip_2.Utilizator
         SqlDataReader dr;
         protected void Page_Load(object sender, EventArgs e)
         {
-            ConexiuneBD.conn.Open();
+            if (!IsPostBack)
+            {
+                ConexiuneBD.conn.Open();
 
-            cmd = new SqlCommand("select * from Produse where Categorie_nume= 'Diverse' ", ConexiuneBD.conn);
-            cmd.ExecuteNonQuery();
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(dt);
-            d1.DataSource = dt;
-            d1.DataBind();
+                cmd = new SqlCommand("select * from Produse where Categorie_nume= 'Diverse' ", ConexiuneBD.conn);
+                cmd.ExecuteNonQuery();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                d1.DataSource = dt;
+                d1.DataBind();
 
-            ConexiuneBD.conn.Close();
+                ConexiuneBD.conn.Close();
+            }
         }
         protected void btnAdd1_Click(object sender, EventArgs e)
         {
@@ -51,9 +54,7 @@ namespace Licenta_prototip_2.Utilizator
                 }
 
                 ConexiuneBD.conn.Close();
-
             }
-
         }
     }
     }

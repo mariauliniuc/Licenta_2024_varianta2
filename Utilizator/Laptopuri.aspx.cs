@@ -40,6 +40,7 @@ namespace Licenta_prototip_2.Utilizator
 
             if (lblNume != null && lblPret != null && imgProd != null)
             {
+
                 string imgFileName = System.IO.Path.GetFileName(imgProd.ImageUrl);
 
                 ConexiuneBD.conn.Open();
@@ -52,9 +53,10 @@ namespace Licenta_prototip_2.Utilizator
 
                     cmd.ExecuteNonQuery();
                 }
-
-                ConexiuneBD.conn.Close();
             }
+
+            ConexiuneBD.conn.Close();
+
         }
     }
 }
