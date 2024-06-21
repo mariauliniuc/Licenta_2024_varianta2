@@ -81,5 +81,7 @@
 <p>Accesati pagina LogareAdmin.aspx, care se poate accesa si in urma actionarii butonului Administrare din pagina Logare.aspx, apoi introduceti credendiatele de autentificare</p>
 <p>Urmatoare pagina in care veti fi redirectionat este dashboard.aspx, apoi puteti naviga prin paginile add.aspx, del.aspx, comenzi.aspx sau clienti.aspx, de unde se pot desfasura actiuni asupra produselor precum adaugare, vizualizare si stergere, precum si vizualizarea comenzilor plasate sau a clientilor inregistrati la ora actuala. </p>
 
+<p>Proiectul de gaseste la adresa repository-ului pe gitlab.upt.ro: https://gitlab.upt.ro/maria.uliniuc/Lucrare_Licenta_Uliniuc_Maria_2024</p>
+
 
 
